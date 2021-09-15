@@ -21,11 +21,14 @@ class lineEquation{
     public int setLineLength(){
         return  lenghthOfLine;
     }
-    public void getlineCompare(){
+    public void getLineCheck(){
         if(this.lenghthOfLine == this.lengthOfLine1)
             System.out.println("Line are equal in the length");
+        else if(this.lenghthOfLine < this.lengthOfLine1)
+            System.out.println("length of line1 less than the length of line2");
         else
-            System.out.println("both line not equal in the length");
+            System.out.println("length of line1 is greater than the length of line2");
+
     }
 }
 
@@ -49,7 +52,7 @@ public class LineComparison {
             System.out.println("Length of line1 is smaller than length of line2");  */
         // calling the class method to compute length of the line
         line.getLineLength(10,40,60,80,20,22,40,60);
-        line.getlineCompare();
+        line.getLineCheck();
 
 
     }

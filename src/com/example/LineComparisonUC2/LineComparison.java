@@ -2,17 +2,30 @@ package com.example.LineComparisonUC2;
 
 class lineEquation{
    private int X1,X2,Y1,Y2;
+   private int A1,A2,B1,B2;
    public int lenghthOfLine;
+   public int lengthOfLine1;
     //method to compute the line length
-    public void getLineLength(int X1,int X2,int Y1,int Y2){
+    public void getLineLength(int X1,int X2,int Y1,int Y2,int A1,int A2,int B1, int B2){
         this.X1=X1;
         this.X2=X2;
         this.Y1=Y1;
         this.Y2=Y2;
+        this.A1=A1;
+        this.A2=A2;
+        this.B1=B1;
+        this.B2=B2;
         lenghthOfLine = (int)(Math.sqrt((X2 - X1) ^ 2 + (Y2 - Y1) ^ 2));
+        lengthOfLine1 = (int)(Math.sqrt((A2 - A1) ^ 2 + (B2 - B1) ^ 2));
     }
     public int setLineLength(){
         return  lenghthOfLine;
+    }
+    public void getlineCompare(){
+        if(this.lenghthOfLine == this.lengthOfLine1)
+            System.out.println("Line are equal in the length");
+        else
+            System.out.println("both line not equal in the length");
     }
 }
 
@@ -35,8 +48,8 @@ public class LineComparison {
         else
             System.out.println("Length of line1 is smaller than length of line2");  */
         // calling the class method to compute length of the line
-        line.getLineLength(10,40,60,80);
-        System.out.println("Length of the first line"+line.setLineLength());
+        line.getLineLength(10,40,60,80,20,22,40,60);
+        line.getlineCompare();
 
 
     }
